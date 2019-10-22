@@ -19,6 +19,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BSt-s3-zbq">
+                                <rect key="frame" x="14" y="746" width="386" height="31"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onViewNumChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="rYN-1v-EeC"/>
+                                </connections>
+                            </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-5r-XC7">
                                 <rect key="frame" x="14" y="808" width="386" height="31"/>
                                 <connections>
@@ -28,7 +35,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXy-b8-hnf">
                                 <rect key="frame" x="170" y="838" width="74" height="24"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf6-Ts-fNZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cf6-Ts-fNZ">
                                         <rect key="frame" x="16" y="0.0" width="42" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="qpu-UC-Kyd"/>
@@ -52,10 +59,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6u2-5r-XC7" secondAttribute="trailing" constant="16" id="0SD-tH-hK4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ed8-vb-J7L" secondAttribute="trailing" id="4DW-M6-FpV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6u2-5r-XC7" secondAttribute="bottom" constant="24" id="C9L-IS-Bk7"/>
+                            <constraint firstItem="nXy-b8-hnf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FVp-B9-DdB"/>
                             <constraint firstItem="6u2-5r-XC7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Qkq-OH-9sy"/>
                             <constraint firstItem="ed8-vb-J7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VEj-Gh-ao7"/>
                             <constraint firstItem="nXy-b8-hnf" firstAttribute="centerX" secondItem="ed8-vb-J7L" secondAttribute="centerX" id="WYC-0w-xqb"/>
                             <constraint firstAttribute="bottom" secondItem="ed8-vb-J7L" secondAttribute="bottom" id="iyX-K0-h5o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BSt-s3-zbq" secondAttribute="trailing" constant="16" id="jAq-cH-l6s"/>
+                            <constraint firstItem="6u2-5r-XC7" firstAttribute="top" secondItem="BSt-s3-zbq" secondAttribute="bottom" constant="32" id="jHN-7y-pjZ"/>
+                            <constraint firstItem="BSt-s3-zbq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lK2-Jb-xY8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nXy-b8-hnf" secondAttribute="trailing" constant="16" id="qQ9-JG-cfd"/>
                             <constraint firstItem="ed8-vb-J7L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r7d-P5-C9Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nXy-b8-hnf" secondAttribute="bottom" id="xup-qO-Zgk"/>
                         </constraints>
@@ -65,6 +77,7 @@
                         <outlet property="labelRate" destination="cf6-Ts-fNZ" id="OEg-r1-FHz"/>
                         <outlet property="rootStackView" destination="ed8-vb-J7L" id="Ui7-56-cP8"/>
                         <outlet property="sliderRate" destination="6u2-5r-XC7" id="Hft-mF-UcT"/>
+                        <outlet property="sliderViewNum" destination="BSt-s3-zbq" id="lrA-YK-Lf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
